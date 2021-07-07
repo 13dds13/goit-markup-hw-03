@@ -21,8 +21,6 @@ body {
   outline: 1px solid aqua;
 }
 
-/* Main page - Studio */
-
 /* Text decoration for <a> */
 .logo,
 .current,
@@ -30,6 +28,18 @@ body {
 .contacts-link,
 .footer-contacts {
   text-decoration: none;
+}
+
+/* Main page - Studio */
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
 }
 
 /* Logo */
@@ -51,6 +61,7 @@ body {
 
 /* Nav menu */
 .nav-menu {
+  display: flex;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
@@ -73,6 +84,7 @@ a.current {
 
 /* Header contacts */
 .menu-contacts {
+  display: flex;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
