@@ -5,14 +5,24 @@
   --accent-color: #2196f3;
   --logo-color: #000000;
   --bgc: #2f303a;
-  --background-button: #f5f4fa;
+  --background-button-section: #f5f4fa;
   --text-color-on-hover-bg: #ffffff;
+  --hero-btn-hover: #188ce8;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
   font-family: 'Roboto', sans-serif;
   color: var(--text-color);
 }
@@ -31,19 +41,13 @@ body {
   padding-bottom: 94px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul {
-  margin: 0;
-  padding: 0;
+.section:nth-child(2n + 1) {
+  background-color: var(--background-button-section);
 }
 
 .images {
+  max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -145,6 +149,8 @@ a.current {
 /* ----------------------------------------------------------------------------- */
 .line {
   min-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   border-top: 1px solid #ececec;
 }
 /* ----------------------------------------------------------------------------- */
@@ -152,18 +158,16 @@ a.current {
 /* Hero */
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
-}
-
-.hero {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 200px 452px;
+  text-align: center;
   background-color: #2f303a;
   /* temp bgc */
 }
 
 .hero-title {
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 30px;
   max-width: 696px;
   font-weight: 900;
@@ -176,10 +180,10 @@ a.current {
 }
 
 .hero-button {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  font-weight: bold;
+  /* width: 200px;
+  height: 50px; */
+  padding: 10px 32px;
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   text-align: center;
@@ -192,6 +196,10 @@ a.current {
   cursor: pointer;
 }
 
+.hero-button:hover {
+  background-color: var(--hero-btn-hover);
+}
+
 /* Features */
 
 .features .title {
@@ -199,8 +207,13 @@ a.current {
 }
 
 .features-list {
+  margin-bottom: 94px;
   display: flex;
   list-style-type: none;
+}
+
+.features-list .item {
+  width: 270px;
 }
 
 .features-list .item:not(:last-child) {
@@ -223,8 +236,6 @@ a.current {
   letter-spacing: 0.03em;
 }
 
-/* specialisation */
-
 .specialisation-title {
   margin-bottom: 50px;
   font-weight: bold;
@@ -241,7 +252,7 @@ a.current {
   list-style-type: none;
 }
 
-/* section team */
+/* Our team */
 
 .team-title {
   margin-bottom: 50px;
@@ -262,6 +273,14 @@ a.current {
   margin-right: 30px;
 }
 
+.team-list .item {
+  padding-bottom: 30px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
 .team-list .images {
   margin-bottom: 30px;
 }
@@ -277,7 +296,6 @@ a.current {
 }
 
 .list-profession {
-  margin-bottom: 30px;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
@@ -332,22 +350,35 @@ a.current {
   color: var(--accent-color);
 }
 
-/* Page - Portfolio */
+/* ---------------------------Page - Portfolio */
+
+.projects {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 
 /* Filter buttons */
 
 .buttons-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
   list-style-type: none;
 }
 
+.buttons-list .item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .filter-button {
+  padding: 6px 22px;
   font-weight: 500;
   font-size: 16px;
-  line-height: 26px;
+  line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-color);
-  background: var(--background-button);
+  background: var(--background-button-section);
   border-radius: 4px;
   border-style: none;
   cursor: pointer;
@@ -363,11 +394,34 @@ a.current {
 }
 
 /* Projects */
+
+.projects-title {
+  display: none;
+}
+
 .projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
   list-style-type: none;
 }
 
+.projects-list > .item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.card-text {
+  padding: 20px 24px;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+}
+
 .project-name {
+  margin-bottom: 4px;
   font-weight: bold;
   font-size: 18px;
   line-height: 36px;
