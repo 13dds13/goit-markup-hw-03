@@ -64,6 +64,10 @@ body {
 
 /* Header */
 
+.page-header {
+  border-bottom: 1px solid #ececec;
+}
+
 .header-container {
   display: flex;
   align-items: center;
@@ -147,12 +151,12 @@ a.current {
 }
 
 /* ----------------------------------------------------------------------------- */
-.line {
+/* .line {
   min-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   border-top: 1px solid #ececec;
-}
+} */
 /* ----------------------------------------------------------------------------- */
 
 /* Hero */
